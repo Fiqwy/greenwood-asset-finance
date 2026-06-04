@@ -1,0 +1,138 @@
+/* ============================================================
+   GREENWOOD ASSET FINANCE — Design Tokens
+   Palette SAMPLED from Troy's logo: deep forest green,
+   sage-grey, clean off-white. Monochrome green identity.
+   ============================================================ */
+
+:root {
+
+  /* ════════ BRAND PRIMITIVES (sampled from logo) ════════ */
+  --brand-canopy:      #163328;  /* deepest forest — headings on light */
+  --brand-forest:      #1E4D37;  /* primary CTA fill */
+  --brand-forest-deep: #14301F;  /* CTA hover / pressed */
+  --brand-moss:        #5E7567;  /* light-theme accent-2, italic accent */
+  --brand-sage:        #9BA5A0;  /* logo sage-grey — soft secondary */
+  --brand-sage-light:  #B9C7BE;  /* dark-theme accent (pops on forest) */
+  --brand-bark:        #122A1D;  /* dark sections background */
+
+  /* ───── Neutrals (cool off-white to match the logo) ────── */
+  --paper:     #F5F6F3;
+  --surface:   #FFFFFF;
+  --surface-2: #EAEDE7;
+  --ink:       #14201A;
+  --ink-mute:  #46544C;
+  --ink-meta:  #5D6B63;   /* WCAG AA: 5.16:1 on --paper */
+  --white:     #FFFFFF;
+  --black:     #000000;
+
+  /* On-dark neutrals (cream, matches logo-light) */
+  --paper-dark: #F3F1EA;
+  --mute-dark:  #B7C0B8;
+  --meta-dark:  #8E9A8F;   /* WCAG AA: 5.22:1 on --brand-bark */
+
+  /* ───── Semantic roles — default LIGHT theme ───────────── */
+  --bg:           var(--paper);
+  --surface-1:    var(--surface);
+  --text:         var(--ink);
+  --text-mute:    var(--ink-mute);
+  --text-meta:    var(--ink-meta);
+  --heading:      var(--brand-canopy);
+  --accent:       var(--brand-forest);
+  --accent-hover: var(--brand-forest-deep);
+  --accent-2:     var(--brand-moss);
+  --divider:      rgba(20, 32, 26, 0.10);
+  --line-faint:   rgba(20, 32, 26, 0.06);
+  --line-soft:    rgba(20, 32, 26, 0.14);
+  --on-accent:    #F5F6F3;
+
+  /* ───── Type Scale (fluid clamp) ───────────────────────── */
+  --fs-xs:     clamp(0.72rem, 0.70rem + 0.10vw, 0.78rem);
+  --fs-sm:     clamp(0.84rem, 0.82rem + 0.12vw, 0.92rem);
+  --fs-base:   clamp(0.98rem, 0.94rem + 0.18vw, 1.08rem);
+  --fs-md:     clamp(1.10rem, 1.02rem + 0.34vw, 1.30rem);
+  --fs-lg:     clamp(1.30rem, 1.15rem + 0.62vw, 1.62rem);
+  --fs-xl:     clamp(1.80rem, 1.55rem + 1.15vw, 2.55rem);
+  --fs-2xl:    clamp(2.45rem, 2.00rem + 2.20vw, 3.90rem);
+  --fs-3xl:    clamp(3.10rem, 2.35rem + 3.70vw, 5.60rem);
+  --fs-display:clamp(3.70rem, 2.60rem + 5.60vw, 7.40rem);
+
+  --lh-tight: 1.04;
+  --lh-snug:  1.12;
+  --lh-base:  1.6;
+  --lh-loose: 1.78;
+
+  --tracking-tight: -0.03em;
+  --tracking-snug:  -0.018em;
+  --tracking-base:  -0.006em;
+  --tracking-wide:   0.04em;
+  --tracking-extra:  0.18em;
+
+  /* ───── Type Families ──────────────────────────────────── */
+  /* Geist — clean premium grotesque (display, UI, body).
+     Fraunces — refined serif, ITALIC ACCENT WORDS ONLY. */
+  --font-sans:  "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
+
+  /* ───── Spacing (8pt grid) ─────────────────────────────── */
+  --s-1: 0.25rem;  --s-2: 0.5rem;   --s-3: 0.75rem;  --s-4: 1rem;
+  --s-5: 1.5rem;   --s-6: 2rem;     --s-7: 3rem;     --s-8: 4rem;
+  --s-9: 6rem;     --s-10: 8rem;    --s-11: 12rem;
+
+  --section-y: clamp(4.5rem, 3.5rem + 5vw, 8.5rem);
+  --section-x: clamp(1.25rem, 0.5rem + 4vw, 5rem);
+
+  /* ───── Layout ─────────────────────────────────────────── */
+  --container:        1320px;
+  --container-narrow: 880px;
+  --container-wide:   1560px;
+  --gutter:           clamp(1rem, 0.5rem + 1.5vw, 2rem);
+
+  /* ───── Radius ─────────────────────────────────────────── */
+  --r-sm: 6px;  --r-md: 12px;  --r-lg: 18px;  --r-xl: 28px;  --r-pill: 999px;
+
+  /* ───── Shadow (forest-tinted) ─────────────────────────── */
+  --shadow-sm: 0 1px 2px rgba(20,32,26,0.05), 0 1px 1px rgba(20,32,26,0.03);
+  --shadow-md: 0 10px 36px rgba(20,32,26,0.09), 0 2px 6px rgba(20,32,26,0.04);
+  --shadow-lg: 0 28px 70px rgba(20,32,26,0.16);
+  --glow-accent: 0 0 50px rgba(30, 77, 55, 0.22);
+
+  /* ───── Motion ─────────────────────────────────────────── */
+  --ease-out-soft: cubic-bezier(0.16, 1, 0.30, 1);
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-in-out:   cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-snap:     cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --t-fast: 220ms;  --t-base: 440ms;  --t-slow: 820ms;  --t-cine: 1500ms;
+
+  /* ───── Z-index ────────────────────────────────────────── */
+  --z-base: 1;   --z-raised: 10;  --z-sticky: 50;  --z-overlay: 80;
+  --z-nav: 90;   --z-modal: 100;  --z-cursor: 9999;
+}
+
+/* ════════ Dark theme — [data-theme="dark"] sections ════════ */
+[data-theme="dark"] {
+  --bg:           var(--brand-bark);
+  --surface-1:    #1A3327;
+  --surface-2:    #21402F;
+  --text:         var(--paper-dark);
+  --text-mute:    var(--mute-dark);
+  --text-meta:    var(--meta-dark);
+  --heading:      var(--paper-dark);
+  --accent:       var(--brand-sage-light);
+  --accent-hover: #CBD7CF;
+  --accent-2:     var(--brand-sage-light);
+  --divider:      rgba(243, 241, 234, 0.12);
+  --line-faint:   rgba(243, 241, 234, 0.07);
+  --line-soft:    rgba(243, 241, 234, 0.18);
+  --on-accent:    var(--brand-bark);
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.4);
+  --shadow-md: 0 14px 44px rgba(0,0,0,0.5);
+  --shadow-lg: 0 32px 84px rgba(0,0,0,0.66);
+}
+
+/* ───── Reduced motion ─────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  :root { --t-fast: 0ms; --t-base: 0ms; --t-slow: 0ms; --t-cine: 0ms; }
+  html { scroll-behavior: auto; }
+}

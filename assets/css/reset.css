@@ -1,0 +1,94 @@
+/* ============================================================
+   GREENWOOD — Modern Reset
+   Based on Andy Bell's modern reset, tightened for our use.
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: auto;              /* Lenis controls scroll */
+  -webkit-tap-highlight-color: transparent;
+  hyphens: none;                      /* house rule: never hyphenate */
+}
+
+body {
+  min-height: 100dvh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
+  letter-spacing: var(--tracking-base);
+  font-weight: 400;
+  font-feature-settings: "kern", "liga", "ss01";
+  overflow-x: hidden;
+  transition: background var(--t-base) var(--ease-out-soft),
+              color var(--t-base) var(--ease-out-soft);
+}
+
+/* Lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+.lenis.lenis-scrolling iframe { pointer-events: none; }
+
+img, picture, video, canvas, svg { display: block; max-width: 100%; height: auto; }
+img { font-style: italic; vertical-align: middle; }
+img[loading="lazy"] { content-visibility: auto; }
+
+input, button, textarea, select { font: inherit; color: inherit; }
+button {
+  background: none; border: 0; cursor: pointer;
+  text-align: inherit; -webkit-appearance: none; appearance: none;
+}
+
+a { color: inherit; text-decoration: none; -webkit-tap-highlight-color: transparent; }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; text-wrap: balance; hyphens: none; }
+p { text-wrap: pretty; max-width: 64ch; }
+ul, ol { list-style: none; }
+main { isolation: isolate; }
+
+::selection { background: var(--accent); color: var(--on-accent); }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--line-soft); border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-meta); }
+
+/* Skip link */
+.skip-link {
+  position: absolute; left: -9999px; top: 0; z-index: var(--z-modal);
+  background: var(--brand-canopy); color: var(--paper);
+  padding: var(--s-3) var(--s-5); font-size: var(--fs-sm);
+  font-weight: 600; letter-spacing: var(--tracking-wide); border-radius: 0 0 var(--r-sm) 0;
+}
+.skip-link:focus { left: 0; top: 0; }
+
+/* Screen reader only */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+[hidden] { display: none !important; }

@@ -7,5 +7,14 @@
 /vendor/*
   Cache-Control: public, max-age=31536000, immutable
 
+/assets/brands/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/img/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/logo/*
+  Cache-Control: public, max-age=31536000, immutable
+
 /assets/*
   Cache-Control: public, max-age=86400

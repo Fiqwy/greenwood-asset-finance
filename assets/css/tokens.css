@@ -15,10 +15,11 @@
   --brand-sage-light:  #B9C7BE;  /* dark-theme accent (pops on forest) */
   --brand-bark:        #122A1D;  /* dark sections background */
 
-  /* ───── Neutrals (cool off-white to match the logo) ────── */
-  --paper:     #F5F6F3;
+  /* ───── Neutrals — Stacked-style WHITE default ─────────── */
+  --paper:     #FFFFFF;   /* page background — clean white */
   --surface:   #FFFFFF;
-  --surface-2: #EAEDE7;
+  --surface-2: #F1F4F0;   /* faint green-grey for muted blocks/alt sections */
+  --surface-3: #F7F9F6;   /* whisper tint for hero/section wash */
   --ink:       #14201A;
   --ink-mute:  #46544C;
   --ink-meta:  #5D6B63;   /* WCAG AA: 5.16:1 on --paper */
@@ -43,7 +44,7 @@
   --divider:      rgba(20, 32, 26, 0.10);
   --line-faint:   rgba(20, 32, 26, 0.06);
   --line-soft:    rgba(20, 32, 26, 0.14);
-  --on-accent:    #F5F6F3;
+  --on-accent:    #FFFFFF;
 
   /* ───── Type Scale (fluid clamp) ───────────────────────── */
   --fs-xs:     clamp(0.72rem, 0.70rem + 0.10vw, 0.78rem);

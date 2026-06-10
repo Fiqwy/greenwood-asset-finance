@@ -418,7 +418,7 @@
       fd.append('access_key', key);
       fd.append('name', fullName());
       fd.append('subject', 'New enquiry — Greenwood Asset Finance');
-      fd.append('from_name', 'Greenwood website');
+      fd.append('from_name', 'Greenwood Asset Finance website');
       fetch('https://api.web3forms.com/submit', { method: 'POST', body: fd })
         .then(function (r) { return r.json().catch(function () { return { success: r.ok }; }); })
         .then(function (data) { if (data && data.success) succeed(); else { submit.disabled = false; submit.textContent = 'Send enquiry'; fallback(); } })

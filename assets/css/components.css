@@ -163,9 +163,9 @@ textarea.field__control, .field__control--area { min-height: 96px; line-height: 
   box-shadow: 0 1px 0 var(--divider);
 }
 .nav__brand { display: inline-flex; align-items: center; }
-.nav__logo { display: block; height: 72px; width: auto; }
-@media (max-width: 920px) { .nav__logo { height: 60px; } }
-@media (max-width: 600px) { .nav__logo { height: 50px; } }
+.nav__logo { display: block; height: 88px; width: auto; }
+@media (max-width: 920px) { .nav__logo { height: 72px; } }
+@media (max-width: 600px) { .nav__logo { height: 58px; } }
 .nav__links { display: flex; align-items: center; justify-content: center; gap: var(--s-5); }
 .nav__link { display: inline-flex; align-items: center; gap: 0.3rem; min-height: 44px; padding: 0 0.4rem; font-family: var(--font-sans); font-size: var(--fs-sm); font-weight: 500; color: currentColor; opacity: 0.84; background: none; border: 0; cursor: pointer; transition: opacity var(--t-fast); }
 .nav__link:hover { opacity: 1; }

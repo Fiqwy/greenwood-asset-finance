@@ -42,7 +42,7 @@ window.GW = {
 
   /* ───── Enquiry form ───────────────────────────────────── */
   form: {
-    web3formsKey: "",   // paste Web3Forms access key; blank => mailto fallback
+    web3formsKey: "6c6948fc-0d76-4da7-bce6-a53eb1a5eb09",   // Web3Forms access key; leads -> troy@greenwoodaf.com.au
     messages: {
       sending:        "Sending...",
       success:        "Thank you. We have your details and Troy will be in touch shortly.",
